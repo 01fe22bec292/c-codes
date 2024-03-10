@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char ch; // Variable to store the character
+
+    printf("Lowercase alphabets from a to z are:\n");
+
+    for(ch = 'a'; ch <= 'z'; ++ch)
+        {
+            // Loop through characters from 'a' to 'z'
+          printf("%c ", ch); // Print each character
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
