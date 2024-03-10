@@ -1,0 +1,17 @@
+//swaping two numbers without 3rd varible
+#include <stdio.h>
+
+int main() {
+    int a = 5, b = 10;
+
+    printf("Before swapping: a = %d, b = %d\n", a, b);
+
+    // Swapping without a third variable
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
