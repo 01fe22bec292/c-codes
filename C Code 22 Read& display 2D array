@@ -1,0 +1,45 @@
+// Develop a modular c program to read the two dimensional array and display the two dimensional array.
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define row 10
+#define col 10
+void read_array(int m, int n, int a[row][col])
+{
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+}
+
+void display_array(int m, int n, int a[row][col])
+{
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+}
+int main()
+{
+    int m, n, a[row][col];
+    scanf("%d", &m);
+    scanf("%d", &n);
+    if (m > 0 && n > 0)
+    {
+        read_array(m, n, a);
+        display_array(m, n, a);
+    }
+    else
+        printf("Rows and columns should be more than 0.");
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
