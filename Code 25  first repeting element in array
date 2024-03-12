@@ -1,0 +1,44 @@
+// Given an array of integers find the first repeating element.
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define MAX 50
+
+int main()
+{
+    int n, a[MAX], temp = -1, i, j, repeat;
+    scanf("%d", &n);
+    if (n > 0 && n <= 10000)
+    {
+        for (i = 0; i <= n; i++)
+        {
+            scanf("%d", &a[i]);
+        }
+        for (i = 0; i < n - 1; i++)
+        {
+            for (j = i + 1; j < n; j++)
+            {
+                if (a[i] == a[j])
+                {
+                    temp = j;
+                    repeat = a[j];
+                    break;
+                }
+            }
+            if (temp != -1)
+                break;
+        }
+        if (temp != -1)
+        {
+            printf("%d ", repeat);
+        }
+        else
+            printf("No repeating element");
+    }
+
+    else
+        printf("Invalid");
+
+    return 0;
+}
